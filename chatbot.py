@@ -15,8 +15,8 @@ import openai
 openai.api_key = st.secrets["API_KEYS"]["openai"]
 
 
-st.title("Chatbot : ChatGPT and Streamlit Chat")
-st.subheader("AI Tutor:")
+st.title("Chatbot : ChatGPT General Bot To Ask General Questions")
+st.subheader("AI General Chatbot:")
 
 model = st.selectbox(
     "Select a model",
