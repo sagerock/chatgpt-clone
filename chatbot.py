@@ -14,7 +14,6 @@ import openai
 # pinecone_api_key = st.secrets["API_KEYS"]["pinecone"]
 openai.api_key = st.secrets["API_KEYS"]["openai"]
 
-
 st.title("Chatbot : ChatGPT General Bot To Ask General Questions")
 st.subheader("AI General Chatbot:")
 
@@ -28,7 +27,7 @@ if 'generated' not in st.session_state:
 if 'past' not in st.session_state:
     st.session_state['past'] = []
 
-query = st.text_input("Query: ", key="input")
+query = st.text_area("Query: ", key="input")  # Changed st.text_input to st.text_area
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = get_initial_message()
